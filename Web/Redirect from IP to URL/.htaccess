@@ -1,0 +1,5 @@
+RewriteCond %{HTTP_HOST} ^00\.000\.000\.000 
+#00\.000\.000\.000 - this is your IP
+
+RewriteRule (.*) https://site.com%{REQUEST_URI} [R=301,L]
+#site.com - the name of the website to which it will redirect
