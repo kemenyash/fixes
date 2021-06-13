@@ -1,3 +1,7 @@
+#This .htaccess make case of your URL as a downcase
+#Just add this .htaccess to your directory
+#Request like this - https://site.com/SOME/test.html will become like this - https://site.com/some/test.html
+
 RewriteEngine On
 RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.*)/"
 RewriteRule [A-Z] %1 [R=301,L]
